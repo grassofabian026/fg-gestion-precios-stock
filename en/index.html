@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" type="image/png" href="/favicon.png">
+
+  <title>Plugin WooCommerce | Gestión de Stock, Precios y Ofertas - FG</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <style>
+    body { background-color: #f9fafc; color: #333; }
+    h1, h2, h3 { font-weight: 700; }
+    .hero {
+      background: linear-gradient(135deg, #007bff, #6610f2);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      border-radius: 0 0 40px 40px;
+    }
+    .hero h1 { font-size: 2.8rem; }
+    .section { padding: 60px 0; }
+    .price-card {
+      border: 2px solid #007bff;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+    .price-card:hover { transform: translateY(-5px); box-shadow: 0 0 20px rgba(0,0,0,0.1); }
+    .table-comparativa th, .table-comparativa td { text-align: center; vertical-align: middle; }
+    .btn-primary { border-radius: 50px; padding: 10px 30px; font-size: 1.1rem; }
+    .badge-pro { background-color: #ffc107; color: #000; }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es FG Gestión de Stock, Precios y Ofertas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es un plugin para WooCommerce desarrollado en Argentina que permite editar precios, stock, ofertas y productos destacados desde una sola pantalla. Está diseñado para negocios que necesitan actualizar información con frecuencia y optimizar la gestión diaria de su tienda online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Sirve para tiendas con muchos productos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, está optimizado para trabajar incluso con miles de productos. Los filtros avanzados permiten buscar por categoría, nombre, SKU y tipo de precio, facilitando la gestión de catálogos grandes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo editar precios y ofertas masivamente?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Permite modificar precios regulares, precios en oferta y fechas de descuentos. La versión PRO permite también limpiar automáticamente ofertas vencidas para evitar errores."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El plugin está pensado para Argentina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, FG Gestión de Stock está desarrollado en Argentina y optimizado para las necesidades reales de comercios locales: cambios constantes de precios, soporte en español y compatibilidad con configuraciones típicas de WooCommerce utilizadas en el país."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la diferencia entre la versión Free y la PRO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La versión Free permite editar precios y stock básicos. La versión PRO agrega filtros avanzados, edición de fechas de oferta, limpieza automática de descuentos vencidos, soporte prioritario, actualizaciones de por vida y licencia comercial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo probar la versión PRO antes de comprar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Podés descargar la versión Trial con todas las funciones habilitadas durante 15 días, permitiendo evaluar el plugin sin restricciones antes de adquirirlo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El plugin afecta la velocidad de mi tienda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El procesamiento es interno en el administrador de WordPress, por lo que no afecta la velocidad del sitio público ni el rendimiento de los visitantes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo recibo la versión PRO después del pago?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Luego de realizar el pago, solo tenés que enviar el comprobante por correo. En minutos recibirás el plugin PRO y las instrucciones de instalación."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 style="font-size: 36px;">Plugin WooCommerce – FG Gestión de Stock, Precios y Ofertas</h1>    
+    <h2 style="text-align:center; margin-top:10px; font-size: 23px;">Plugin WooCommerce Argentina para gestionar precios, stock y ofertas</h2>
+    <p class="lead">Edite productos masivamente</p>
+    <p>Actualizá precios, stock, ofertas y productos destacados en segundos</p>
+    <a href="#comprar" class="btn btn-light btn-lg mt-3">💳 Obtener versión PRO</a>
+  </section>
+
+  <!-- POR QUÉ ELEGIR -->
+  <section class="section text-center">
+    <div class="container">
+      <h2 class="mb-5">🚀 ¿Por qué elegir FG Gestión de Stock PRO?</h2>
+      <p class="mb-5" style="max-width: 800px; margin: auto;">
+        FG Gestión de Stock es un plugin diseñado para WooCommerce que permite administrar precios, stock y ofertas desde una sola pantalla. Ideal para tiendas con muchos productos, cambios frecuentes de precios y análisis rápido de información.
+      </p>
+
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5>🕒 Edición rápida</h5>
+              <p>Editá cientos de productos en segundos desde una tabla optimizada.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5>📅 Control de ofertas</h5>
+              <p>Programá fechas de inicio y fin de promociones fácilmente.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5>🔍 Filtros combinados</h5>
+              <p>Buscá por categoría, SKU, nombre o tipo de precio al mismo tiempo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <img src="imagenes/fg_plugin.png" class="img-fluid" alt="Vista del plugin FG Gestión de Stock para WooCommerce">
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARATIVA -->
+  <section class="section bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">🆚 Comparativa: Versión Free vs PRO</h2>
+      <p class="text-center mb-4">Conocé las diferencias entre ambas versiones y elegí la que mejor se adapte a tu tienda.</p>
+
+      <div class="table-responsive">
+        <table class="table table-bordered table-comparativa">
+          <thead class="thead-dark">
+            <tr>
+              <th>Característica</th>
+              <th>Free</th>
+              <th>Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Listado completo de productos</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Filtros combinados avanzados</td><td>❌</td><td>✅</td></tr>
+            <tr><td>Búsqueda por SKU</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Edición de precios y stock</td><td>✅</td><td>✅</td></tr>
+            <tr><td>Gestión de productos destacados</td><td>❌</td><td>✅</td></tr>
+            <tr><td>Fechas de oferta visibles</td><td>👁️ Solo lectura</td><td>🗓️ Editable</td></tr>
+            <tr><td>Limpieza automática de ofertas vencidas</td><td>❌</td><td>✅</td></tr>
+            <tr><td>Soporte prioritario</td><td>❌</td><td>✅</td></tr>
+            <tr><td>Actualizaciones automáticas</td><td>❌</td><td>✅</td></tr>
+            <tr><td>Licencia comercial</td><td>❌</td><td>✅</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIO PRO -->
+  <section id="comprar" class="section text-center">
+    <div class="container">
+      <h2 class="mb-5">💎 Obtener la versión PRO</h2>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6 mb-4">
+          <div class="price-card p-5">
+            <h3 class="mb-3">Licencia PRO – (PayPal)</h3>
+            <p>Todas las funciones premium incluidas.</p>
+            <h2 class="text-primary display-4">$39 USD</h2>
+            <p><small>Pago único – actualizaciones de por vida</small></p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+  <input type="hidden" name="cmd" value="_s-xclick" />
+  <input type="hidden" name="hosted_button_id" value="BQGADX82FGWWG" />
+  <input type="hidden" name="currency_code" value="USD" />
+
+  <!-- URL cuando el pago está completado -->
+  <input type="hidden" name="return" value="https://www.fgwordpress.com.ar/" />
+
+  <!-- Si querés una URL cuando CANCELA -->
+  <input type="hidden" name="cancel_return" value="https://www.fgwordpress.com.ar/" />
+  
+  <input type="submit" value="Comprar ahora" name="submit" class="btn btn-primary btn-lg btn-block">
+</form>
+
+
+            
+            <p class="mt-3 text-muted"><em>Instalación inmediata después de confirmar el pago.</em></p>
+          </div>
+        </div>
+
+       
+      </div>
+
+      <p class="mt-4 text-muted"><em>💥 Oferta de lanzamiento disponible por tiempo limitado.</em></p>
+
+      <p class="mt-3">Luego de realizar el pago, por favor enviá tu comprobante a <a href="mailto:grassofabian@yahoo.com.ar">grassofabian@yahoo.com.ar</a> para recibir el plugin PRO.</p>
+    </div>
+  </section>
+
+  
+
+  <!-- TEXTO LARGO SEO -->
+  <section class="section bg-white">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 25px;">
+        Plugin WooCommerce Argentina: Gestión de Stock, Precios y Ofertas
+      </h2>
+
+      <p>
+        Si tenés una tienda online en Argentina que funciona con WooCommerce, sabés que gestionar cientos o miles de 
+        productos puede resultar lento y complicado. Cambios de listas de precios, actualizaciones de stock, ofertas 
+        temporales y productos destacados requieren tiempo y organización. Por eso desarrollamos <strong>FG Gestión de 
+        Stock, Precios y Ofertas</strong>, un plugin creado específicamente para comercios argentinos que buscan agilizar 
+        su trabajo diario y automatizar procesos.
+      </p>
+
+      <p>
+        Nuestro plugin permite editar de forma masiva precios regulares, precios en oferta, fechas de promoción, 
+        estados de productos destacados y stock disponible. Todo desde una única pantalla rápida, ordenada y pensada 
+        para obtener resultados en segundos. Esto lo convierte en una herramienta ideal para negocios que actualizan 
+        precios con frecuencia debido a la inflación o a cambios constantes de proveedores.
+      </p>
+
+      <h3 style="margin-top: 30px; font-weight: 700;">¿Por qué un plugin hecho en Argentina marca la diferencia?</h3>
+      <p>
+        A diferencia de opciones internacionales, FG Gestión de Stock está desarrollado en Argentina y optimizado para 
+        las necesidades reales del mercado local. Esto incluye compatibilidad con configuraciones típicas de WooCommerce 
+        usadas por tiendas del país, soporte en español, actualizaciones frecuentes y una versión PRO que incluye todas 
+        las funciones profesionales sin suscripciones mensuales.
+      </p>
+
+      <h3 style="margin-top: 30px; font-weight: 700;">Optimización para WooCommerce y rendimiento real</h3>
+      <p>
+        El plugin está diseñado para mostrar productos de forma rápida con filtros avanzados combinados por categoría, 
+        nombre, SKU y tipo de precio. Incluso tiendas con más de diez mil productos pueden trabajar sin problemas. 
+        Esto ayuda a acelerar tareas que normalmente podrían llevar horas, convirtiéndolas en minutos.
+      </p>
+
+      <h3 style="margin-top: 30px; font-weight: 700;">Quiénes usan este plugin</h3>
+      <p>
+        Actualmente, el plugin es utilizado por negocios argentinos de rubros como ferreterías, tiendas de artículos 
+        del hogar, e-commerce de ropa, repuestos, electrónica, belleza, autopartes y vendedores mayoristas. Cualquier 
+        tienda que necesite gestionar rápidamente precios y stock se beneficia del sistema.
+      </p>
+
+      <h3 style="margin-top: 30px; font-weight: 700;">Ventajas de la versión PRO</h3>
+      <p>
+        La versión PRO habilita funciones indispensables como edición de fechas de oferta, limpieza automática de 
+        descuentos vencidos, soporte técnico prioritario, actualizaciones de por vida y filtros avanzados. La versión 
+        Trial permite usar todas estas funciones sin restricciones durante 15 días.
+      </p>
+
+      <h3 style="margin-top: 30px; font-weight: 700;">Conclusión</h3>
+      <p>
+        FG Gestión de Stock es la solución ideal para quienes buscan un <strong>plugin WooCommerce Argentina</strong> que 
+        permita actualizar precios, stock y promociones de forma rápida, precisa y desde un solo lugar. Con versión Free 
+        y PRO, soporte local y optimización constante, podés mejorar la gestión de tu tienda y ahorrar tiempo todos los 
+        días.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ SEO -->
+  <section class="section bg-light">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="font-size: 28px; font-weight: 700; margin-bottom: 25px; text-align:center;">
+        Preguntas frecuentes sobre el Plugin WooCommerce Argentina
+      </h2>
+
+      <div style="margin-bottom: 25px;">
+        <h3 style="font-weight: 700; font-size: 20px;">¿Qué es FG Gestión de Stock, Precios y Ofertas?</h3>
+        <p>
+          Es un plugin para WooCommerce desarrollado en Argentina que permite editar precios, stock, ofertas y 
+          productos destacados de manera rápida desde una sola pantalla. Está diseñado para negocios que necesitan 
+          actualizar información con frecuencia y optimizar la administración de su tienda online.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <h3 style="font-weight: 700; font-size: 20px;">¿Sirve para tiendas con muchos productos?</h3>
+        <p>
+          Sí. El plugin está optimizado para funcionar incluso en tiendas con miles de productos. La carga es rápida 
+          y los filtros avanzados facilitan encontrar artículos por categoría, nombre, SKU o tipo de precio. 
+          Muchas tiendas mayoristas en Argentina ya lo usan a diario.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <h3 style="font-weight: 700; font-size: 20px;">¿Puedo editar precios y ofertas masivamente?</h3>
+        <p>
+          Sí. Podés modificar precios regulares, precios en oferta y fechas de descuentos de forma rápida. La versión 
+          PRO también permite limpiar automáticamente ofertas vencidas para evitar errores en el catálogo.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <h3 style="font-weight: 700; font-size: 20px;">¿Este plugin WooCommerce está pensado para Argentina?</h3>
+        <p>
+          Totalmente. FG Gestión de Stock fue creado pensando en las necesidades reales de comercios argentinos: 
+          cambios constantes de precios, manejo de productos en grandes cantidades y soporte local en español. 
+          También está optimizado para configuraciones típicas de WooCommerce en el país.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <h3 style="font-weight: 700; font-size: 20px;">¿Cuál es la diferencia entre la versión Free y la versión PRO?</h3>
+        <p>
+          La versión Free permite visualizar productos y editar precios y stock básicos.  
+          La versión PRO agrega filtros avanzados, edición de fechas de oferta, limpieza de descuentos vencidos, 
+          soporte prioritario, actualizaciones de por vida y mayor velocidad de trabajo. Además incluye licencia 
+          comercial para tiendas activas.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <h3 style="font-weight: 700; font-size: 20px;">¿Puedo probar la versión PRO antes de comprar?</h3>
+        <p>
+          Sí. Podés descargar la versión Trial con todas las funciones habilitadas durante 15 días. Es la mejor 
+          forma de probar el plugin y ver cómo mejora la gestión de tu WooCommerce.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <h3 style="font-weight: 700; font-size: 20px;">¿El plugin afecta la velocidad de mi tienda?</h3>
+        <p>
+          No. Todo el procesamiento se realiza en la pantalla interna del administrador. La tienda pública no se 
+          ve afectada en absoluto. Además, el plugin está optimizado para cargar rápido incluso con miles de 
+          productos.
+        </p>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <h3 style="font-weight: 700; font-size: 20px;">¿Cómo recibo la versión PRO después del pago?</h3>
+        <p>
+          Una vez realizado el pago por PayPal o MercadoPago, solo tenés que enviar el comprobante a nuestro correo. 
+          Recibirás el plugin PRO y las instrucciones de instalación. En menos de 5 minutos ya podés tenerlo funcionando.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4">
+    <p>© 2025 FG Gestión de Stock — <span class="badge badge-pro">Versión PRO</span></p>
+  </footer>
+
+<!-- MODAL FORM -->
+<div class="modal fade" id="formCompraModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <form id="formDatosCliente" action="enviar_mail.php" method="POST">
+        <div class="modal-header">
+          <h5 class="modal-title">Complete sus datos para continuar</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Nombre *</label>
+            <input type="text" name="nombre" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label>Apellido *</label>
+            <input type="text" name="apellido" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label>Celular *</label>
+            <input type="text" name="celular" class="form-control" required>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Continuar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <script src="js/jquery-3.5.1.slim.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+<!-- SCRIPT PARA CONTROLAR FORMULARIO -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  let urlDestino = "";
+
+  // Al hacer clic en Comprar → abrir modal
+  document.querySelectorAll(".btn-trigger-form").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      urlDestino = this.getAttribute("data-url");
+      $("#formCompraModal").modal("show");
+    });
+  });
+
+  // Enviar formulario SIN recargar la página
+  document.getElementById("formDatosCliente").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    let datos = new FormData(this);
+
+    fetch("enviar_mail.php", {
+      method: "POST",
+      body: datos
+    })
+    .then(res => res.text())
+    .then(res => {
+
+      if(res.trim() === "OK") {
+
+    // Ocultar todos los botones "Comprar ahora"
+    document.querySelectorAll(".btn-comprar-original").forEach(function(btn){
+        btn.classList.add("d-none");
+    });
+
+    // Mostrar el botón real de pago
+    let btnReal = document.querySelector('.btn-comprar-real.d-none');
+    btnReal.href = urlDestino;
+    btnReal.classList.remove("d-none");
+
+    $("#formCompraModal").modal("hide");
+
+    // Llevar scroll al botón nuevo
+    setTimeout(() => {
+      const y = btnReal.getBoundingClientRect().top + window.scrollY - 180;  
+    window.scrollTo({
+        top: y,
+        behavior: "smooth"
+    });
+    }, 300);
+}
+
+    });
+
+  });
+
+});
+</script>
+  
+</body>
+</html>
